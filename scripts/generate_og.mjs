@@ -21,7 +21,7 @@ const htmlContent = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Noto+Serif+Devanagari:wght@600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Noto+Serif+Devanagari:wght@600;700&display=swap');
 
     * {
       box-sizing: border-box;
@@ -48,33 +48,30 @@ const htmlContent = `<!DOCTYPE html>
       background-image: url('${palaceB64}');
       background-size: cover;
       background-position: center bottom;
-      opacity: 0.14;
+      opacity: 0.16;
     }
 
     /* Silk & Ivory Tint Overlay */
     .overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, 
-        rgba(253, 248, 239, 0.95) 0%, 
-        rgba(255, 252, 246, 0.92) 50%, 
-        rgba(253, 248, 239, 0.97) 100%);
+      background: radial-gradient(circle at center, rgba(255, 253, 248, 0.88) 0%, rgba(253, 246, 234, 0.96) 100%);
     }
 
     /* Outer Luxury Frame */
     .card {
       position: relative;
-      width: 1152px;
+      width: 1150px;
       height: 586px;
-      border-radius: 26px;
-      border: 2px solid rgba(200, 160, 85, 0.88);
-      background: rgba(255, 254, 250, 0.86);
-      box-shadow: 0 10px 40px rgba(160, 120, 60, 0.12), inset 0 0 45px rgba(230, 205, 145, 0.18);
+      border-radius: 28px;
+      border: 2px solid rgba(200, 160, 85, 0.9);
+      background: rgba(255, 254, 250, 0.88);
+      box-shadow: 0 12px 48px rgba(160, 120, 60, 0.12), inset 0 0 55px rgba(230, 205, 145, 0.2);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      padding: 22px 30px 18px;
+      padding: 24px 34px 20px;
       z-index: 2;
     }
 
@@ -82,7 +79,7 @@ const htmlContent = `<!DOCTYPE html>
     .card-inset {
       position: absolute;
       inset: 9px;
-      border-radius: 19px;
+      border-radius: 20px;
       border: 1px solid rgba(198, 155, 75, 0.45);
       pointer-events: none;
     }
@@ -90,40 +87,40 @@ const htmlContent = `<!DOCTYPE html>
     /* Corner Florals */
     .corner-boug-tl {
       position: absolute;
-      top: -24px;
-      left: -24px;
-      width: 250px;
-      opacity: 0.9;
+      top: -22px;
+      left: -22px;
+      width: 260px;
+      opacity: 0.92;
       pointer-events: none;
     }
 
     .corner-boug-tr {
       position: absolute;
-      top: -24px;
-      right: -24px;
-      width: 250px;
+      top: -22px;
+      right: -22px;
+      width: 260px;
       transform: scaleX(-1);
-      opacity: 0.9;
+      opacity: 0.92;
       pointer-events: none;
     }
 
     /* Top: Invocations */
     .invocations {
       display: flex;
-      gap: 28px;
+      gap: 32px;
       align-items: center;
       justify-content: center;
       font-family: 'Noto Serif Devanagari', 'Nirmala UI', serif;
-      font-size: 18px;
+      font-size: 18.5px;
       font-weight: 700;
       color: #9e6d24;
       letter-spacing: 0.04em;
     }
 
     .inv-badge {
-      background: rgba(246, 235, 212, 0.7);
-      border: 1px solid rgba(212, 175, 95, 0.45);
-      padding: 3px 18px;
+      background: rgba(246, 235, 212, 0.75);
+      border: 1px solid rgba(212, 175, 95, 0.55);
+      padding: 3.5px 22px;
       border-radius: 999px;
       box-shadow: 0 2px 6px rgba(180, 140, 60, 0.08);
     }
@@ -131,20 +128,20 @@ const htmlContent = `<!DOCTYPE html>
     /* Blessings */
     .blessings {
       text-align: center;
-      margin-top: 1px;
+      margin-top: 2px;
     }
 
     .blessings-title {
       font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.32em;
+      letter-spacing: 0.34em;
       color: #8c6832;
       font-weight: 600;
     }
 
     .blessings-names {
       font-family: 'Marcellus', serif;
-      font-size: 14.5px;
+      font-size: 15px;
       color: #3b2229;
       letter-spacing: 0.03em;
       margin-top: 2px;
@@ -158,112 +155,101 @@ const htmlContent = `<!DOCTYPE html>
     }
 
     .lead-in {
-      font-size: 11.5px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.34em;
+      letter-spacing: 0.36em;
       color: #a87932;
       font-weight: 600;
     }
 
     .couple-title {
       font-family: 'Marcellus', serif;
-      font-size: 58px;
+      font-size: 64px;
       line-height: 1.05;
       color: #4a1625;
       letter-spacing: 0.03em;
-      text-shadow: 0 2px 14px rgba(212, 175, 95, 0.3);
-      margin-top: 3px;
+      text-shadow: 0 2px 16px rgba(212, 175, 95, 0.35);
+      margin-top: 2px;
     }
 
     .couple-amp {
       font-family: 'Great Vibes', cursive;
-      font-size: 46px;
+      font-size: 52px;
       color: #b5832a;
-      margin: 0 14px;
+      margin: 0 16px;
       font-weight: 400;
     }
 
     .parentage {
-      font-size: 15.5px;
+      font-size: 16px;
       font-weight: 600;
       color: #7a3c48;
       letter-spacing: 0.03em;
       margin-top: 3px;
     }
 
-    /* Date Announcement Banner */
-    .date-banner {
+    /* Wedding Centerpiece Plate */
+    .wedding-plate {
+      width: 100%;
+      max-width: 820px;
+      background: linear-gradient(180deg, rgba(255, 253, 248, 0.95) 0%, rgba(253, 246, 235, 0.95) 100%);
+      border: 1.8px solid rgba(212, 175, 95, 0.65);
+      border-radius: 20px;
+      padding: 14px 28px;
+      box-shadow: 0 6px 20px rgba(160, 120, 60, 0.1), inset 0 0 20px rgba(240, 220, 170, 0.25);
+      text-align: center;
+      position: relative;
+      margin-top: 4px;
+    }
+
+    .wedding-eyebrow {
+      display: inline-block;
+      font-family: 'Marcellus', serif;
+      font-size: 14px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #8c2438;
+      font-weight: 700;
+      padding: 3px 20px;
+      border-radius: 999px;
+      background: rgba(246, 230, 205, 0.65);
+      border: 1px solid rgba(212, 175, 95, 0.5);
+    }
+
+    .wedding-date-row {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      margin-top: 3px;
-    }
-
-    .date-banner-line {
-      height: 1px;
-      width: 110px;
-      background: linear-gradient(90deg, transparent, rgba(200, 160, 85, 0.8), transparent);
-    }
-
-    .date-badge {
-      font-family: 'Marcellus', serif;
-      font-size: 16px;
-      letter-spacing: 0.22em;
-      color: #8c2438;
-      font-weight: 600;
-      text-transform: uppercase;
-      padding: 3px 20px;
-      border-radius: 999px;
-      background: rgba(246, 230, 205, 0.55);
-      border: 1px solid rgba(212, 175, 95, 0.45);
-    }
-
-    /* 3-Celebrations Row */
-    .events-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      width: 100%;
-      max-width: 980px;
-      margin-top: 6px;
+      margin-top: 8px;
     }
 
-    .event-card {
-      background: rgba(255, 252, 245, 0.85);
-      border: 1.5px solid rgba(212, 175, 95, 0.45);
-      border-radius: 14px;
-      padding: 10px 14px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(180, 140, 60, 0.08);
-    }
-
-    .event-card-name {
+    .wedding-date {
       font-family: 'Marcellus', serif;
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 22px;
       color: #3b111d;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.04em;
     }
 
-    .event-card-datetime {
-      font-size: 13.5px;
+    .wedding-divider {
+      color: #b5832a;
+      font-size: 18px;
+    }
+
+    .wedding-time {
+      font-size: 19px;
       font-weight: 700;
       color: #9e6d24;
-      margin-top: 2px;
       letter-spacing: 0.02em;
     }
 
-    .event-card-venue {
-      font-size: 12.5px;
+    .wedding-venue {
+      font-size: 17px;
       font-weight: 600;
       color: #4a362e;
-      margin-top: 2px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      line-height: 1.2;
+      margin-top: 6px;
+      letter-spacing: 0.02em;
     }
 
     /* Bottom: Regards & #SYforever */
@@ -273,22 +259,22 @@ const htmlContent = `<!DOCTYPE html>
       justify-content: space-between;
       width: 100%;
       max-width: 960px;
-      border-top: 1.5px solid rgba(212, 175, 95, 0.5);
+      border-top: 1.5px solid rgba(212, 175, 95, 0.55);
       padding-top: 8px;
       margin-top: 4px;
     }
 
     .hashtag {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 800;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.24em;
       color: #8c2438;
       text-transform: uppercase;
     }
 
     .regards {
       font-style: italic;
-      font-size: 15px;
+      font-size: 16px;
       color: #3b2b24;
       letter-spacing: 0.04em;
       font-weight: 700;
@@ -329,29 +315,16 @@ const htmlContent = `<!DOCTYPE html>
       </div>
     </div>
 
-    <!-- Date Announcement -->
-    <div class="date-banner">
-      <div class="date-banner-line"></div>
-      <div class="date-badge">20th &amp; 21st November 2026</div>
-      <div class="date-banner-line"></div>
-    </div>
-
-    <!-- 3 Celebrations Grid -->
-    <div class="events-grid">
-      <div class="event-card">
-        <div class="event-card-name">Haldi</div>
-        <div class="event-card-datetime">20 Nov · 12:00 PM</div>
-        <div class="event-card-venue">De javu manor, Khambra</div>
+    <!-- Wedding Celebration Spotlight Plate -->
+    <div class="wedding-plate">
+      <div class="wedding-eyebrow">Auspicious Wedding Ceremony</div>
+      <div class="wedding-date-row">
+        <span class="wedding-date">Saturday, 21 November 2026</span>
+        <span class="wedding-divider">✦</span>
+        <span class="wedding-time">8:00 PM onwards</span>
       </div>
-      <div class="event-card">
-        <div class="event-card-name">Hathbhara</div>
-        <div class="event-card-datetime">21 Nov · 10:00 AM</div>
-        <div class="event-card-venue">Shree Baba Gajja Ji Tomri</div>
-      </div>
-      <div class="event-card">
-        <div class="event-card-name">Sehra Bandi</div>
-        <div class="event-card-datetime">21 Nov · 5:30 PM</div>
-        <div class="event-card-venue">Senate Hall, Ramada City Centre</div>
+      <div class="wedding-venue">
+        Arabia Hall, The Elysium Grand
       </div>
     </div>
 
@@ -372,26 +345,41 @@ const edgePath = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.
 const tempPng = path.join(rootDir, "scripts", "temp-og.png");
 const outputPng = path.join(rootDir, "public", "og-image.png");
 const outputPngSubahu = path.join(rootDir, "public", "og-image-subahu-yashika.png");
+const outputWebp = path.join(rootDir, "public", "og-image.webp");
+const outputWebpSubahu = path.join(rootDir, "public", "og-image-subahu-yashika.webp");
 
 const cmd = `"${edgePath}" --headless=new --disable-gpu --screenshot="${tempPng}" --window-size=1200,630 "file://${cardHtmlPath.replace(/\\/g, "/")}"`;
 console.log("[generate_og] Capturing screenshot via Edge headless...");
 execSync(cmd, { stdio: "inherit" });
 
-// Run Python PIL for maximum lossless compression: compress_level=9 and optimize=True
+// Run Python PIL for maximum lossless compression: compress_level=9, optimize=True, and lossless WebP method=6
 const pyCompress = `
 from PIL import Image
 import os
 
 img = Image.open(r"${tempPng}").convert("RGB")
+# 100% Lossless PNG with maximum deflate compression level 9 and optimization
 img.save(r"${outputPng}", "PNG", optimize=True, compress_level=9)
 img.save(r"${outputPngSubahu}", "PNG", optimize=True, compress_level=9)
-img.save(r"${path.join(rootDir, "public", "og-image.webp")}", "WEBP", lossless=True, quality=100, method=6)
-img.save(r"${path.join(rootDir, "public", "og-image-subahu-yashika.webp")}", "WEBP", lossless=True, quality=100, method=6)
 
-print(f"Lossless PNG size: {os.path.getsize(r'${outputPng}')} bytes")
-print(f"Lossless WebP size: {os.path.getsize(r'${path.join(rootDir, "public", "og-image.webp")}')} bytes")
+# 100% Lossless WebP with quality=100 and method=6 (slowest/best compression)
+img.save(r"${outputWebp}", "WEBP", lossless=True, quality=100, method=6)
+img.save(r"${outputWebpSubahu}", "WEBP", lossless=True, quality=100, method=6)
+
+print(f"Lossless PNG size (og-image.png): {os.path.getsize(r'${outputPng}')} bytes")
+print(f"Lossless PNG size (og-image-subahu-yashika.png): {os.path.getsize(r'${outputPngSubahu}')} bytes")
+print(f"Lossless WebP size (og-image.webp): {os.path.getsize(r'${outputWebp}')} bytes")
+print(f"Lossless WebP size (og-image-subahu-yashika.webp): {os.path.getsize(r'${outputWebpSubahu}')} bytes")
 `;
 
 fs.writeFileSync(path.join(rootDir, "scripts", "compress.py"), pyCompress, "utf-8");
 execSync(`python scripts/compress.py`, { stdio: "inherit" });
+
+if (fs.existsSync(tempPng)) {
+  fs.unlinkSync(tempPng);
+}
+if (fs.existsSync(path.join(rootDir, "scripts", "compress.py"))) {
+  fs.unlinkSync(path.join(rootDir, "scripts", "compress.py"));
+}
+
 console.log("[generate_og] Lossless compression completed.");

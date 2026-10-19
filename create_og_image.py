@@ -132,7 +132,7 @@ d_w = d_bbox[2] - d_bbox[0]
 draw.text(((WIDTH - d_w) // 2, 392), date_text, fill=(65, 55, 50, 245), font=font_georgia)
 
 # 8. Venue
-venue_text = "De javu manor, Khambra"
+venue_text = "Arabia Hall, The Elysium Grand"
 v_bbox = draw.textbbox((0, 0), venue_text, font=font_georgia_b_lg)
 v_w = v_bbox[2] - v_bbox[0]
 draw.text(((WIDTH - v_w) // 2, 432), venue_text, fill=(90, 75, 65, 240), font=font_georgia_b_lg)
